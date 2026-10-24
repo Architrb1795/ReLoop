@@ -1,0 +1,49 @@
+{
+  "model_name": "resnet50",
+  "architecture": "ResNet50 (torchvision, ImageNet-pretrained backbone, fine-tuned)",
+  "task": "6-class waste image classification",
+  "num_classes": 6,
+  "class_names": [
+    "cardboard",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "trash"
+  ],
+  "input_size": [
+    224,
+    224
+  ],
+  "input_channels": 3,
+  "normalization_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalization_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "training_seed": 42,
+  "dataset_source": "TrashNet (https://github.com/garythung/trashnet), resized variant",
+  "train_val_test_split": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15,
+    "stratified": true
+  },
+  "checkpoint_path": "models/resnet50_best.pt",
+  "official_test_metrics": {
+    "test_accuracy": 0.9105263157894737,
+    "test_precision_macro": 0.8844592208565686,
+    "test_recall_macro": 0.9159652654975755,
+    "test_f1_macro": 0.8940541832351027,
+    "test_f1_weighted": 0.9126578370950308
+  },
+  "total_params": 23520326,
+  "model_size_mb": 90.03,
+  "gpu_used_for_training": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "notes": "Selected as the final deployment model (see reports/model_comparison.md) -- highest accuracy/F1 among all evaluated models, with single-image inference latency competitive with the smaller transfer-learning models on this hardware."
+}

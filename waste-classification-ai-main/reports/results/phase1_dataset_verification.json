@@ -1,0 +1,39 @@
+{
+  "total_images": 2527,
+  "num_classes": 6,
+  "classes": [
+    "cardboard",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "trash"
+  ],
+  "images_per_class": {
+    "paper": 594,
+    "glass": 501,
+    "plastic": 482,
+    "metal": 410,
+    "cardboard": 403,
+    "trash": 137
+  },
+  "imbalance_ratio": 4.335766423357664,
+  "num_corrupted": 0,
+  "corrupted_files": [],
+  "extensions": {
+    ".jpg": 2527
+  },
+  "color_modes": {
+    "RGB": 2527
+  },
+  "unique_dimensions": 1,
+  "width_range": [
+    512,
+    512
+  ],
+  "height_range": [
+    384,
+    384
+  ],
+  "file_size_kb_mean": 16.726541631628415
+}

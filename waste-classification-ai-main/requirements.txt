@@ -1,0 +1,23 @@
+# PyTorch/torchvision: install the CUDA build matching your GPU driver FIRST, separately.
+# This project was developed against an NVIDIA RTX 4050 (CUDA 12.6, driver 610.88):
+#   pip install torch==2.11.0+cu126 torchvision==0.26.0+cu126 --index-url https://download.pytorch.org/whl/cu126
+# On a machine with no CUDA GPU (or a different driver), install the plain versions instead
+# and torch will automatically fall back to CPU:
+#   pip install torch==2.11.0 torchvision==0.26.0
+# See https://pytorch.org/get-started/locally/ to pick the right index URL for your driver.
+torch==2.11.0
+torchvision==0.26.0
+
+numpy==2.5.2
+pandas==3.0.5
+matplotlib==3.11.1
+seaborn==0.13.2
+scikit-learn==1.9.0
+Pillow==12.3.0
+streamlit==1.62.0
+
+# Notebook execution
+jupyter
+ipykernel
+nbconvert==7.17.1
+nbformat==5.11.1

@@ -1,0 +1,682 @@
+[
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic259.jpg",
+    "actual": "plastic",
+    "predicted": "metal",
+    "confidence": 0.7821316719055176,
+    "top3": [
+      [
+        "metal",
+        0.7821316719055176
+      ],
+      [
+        "glass",
+        0.17154528200626373
+      ],
+      [
+        "plastic",
+        0.045802704989910126
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper592.jpg",
+    "actual": "paper",
+    "predicted": "trash",
+    "confidence": 0.5984328389167786,
+    "top3": [
+      [
+        "trash",
+        0.5984328389167786
+      ],
+      [
+        "metal",
+        0.2602144181728363
+      ],
+      [
+        "plastic",
+        0.09536559879779816
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic199.jpg",
+    "actual": "plastic",
+    "predicted": "glass",
+    "confidence": 0.9767642617225647,
+    "top3": [
+      [
+        "glass",
+        0.9767642617225647
+      ],
+      [
+        "metal",
+        0.015516112558543682
+      ],
+      [
+        "plastic",
+        0.006905197165906429
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper225.jpg",
+    "actual": "paper",
+    "predicted": "trash",
+    "confidence": 0.4457983374595642,
+    "top3": [
+      [
+        "trash",
+        0.4457983374595642
+      ],
+      [
+        "cardboard",
+        0.2785845398902893
+      ],
+      [
+        "paper",
+        0.21734307706356049
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic455.jpg",
+    "actual": "plastic",
+    "predicted": "paper",
+    "confidence": 0.9779303073883057,
+    "top3": [
+      [
+        "paper",
+        0.9779303073883057
+      ],
+      [
+        "metal",
+        0.014961732551455498
+      ],
+      [
+        "plastic",
+        0.0036368039436638355
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper113.jpg",
+    "actual": "paper",
+    "predicted": "metal",
+    "confidence": 0.9589125514030457,
+    "top3": [
+      [
+        "metal",
+        0.9589125514030457
+      ],
+      [
+        "cardboard",
+        0.038616765290498734
+      ],
+      [
+        "trash",
+        0.0016505098901689053
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic9.jpg",
+    "actual": "plastic",
+    "predicted": "trash",
+    "confidence": 0.7407928705215454,
+    "top3": [
+      [
+        "trash",
+        0.7407928705215454
+      ],
+      [
+        "metal",
+        0.12775444984436035
+      ],
+      [
+        "plastic",
+        0.10024198889732361
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\glass\\glass6.jpg",
+    "actual": "glass",
+    "predicted": "plastic",
+    "confidence": 0.8357367515563965,
+    "top3": [
+      [
+        "plastic",
+        0.8357367515563965
+      ],
+      [
+        "glass",
+        0.14359883964061737
+      ],
+      [
+        "trash",
+        0.015334389172494411
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic196.jpg",
+    "actual": "plastic",
+    "predicted": "metal",
+    "confidence": 0.8675236105918884,
+    "top3": [
+      [
+        "metal",
+        0.8675236105918884
+      ],
+      [
+        "glass",
+        0.05856705456972122
+      ],
+      [
+        "plastic",
+        0.04460817947983742
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper370.jpg",
+    "actual": "paper",
+    "predicted": "trash",
+    "confidence": 0.7596457004547119,
+    "top3": [
+      [
+        "trash",
+        0.7596457004547119
+      ],
+      [
+        "glass",
+        0.11306427419185638
+      ],
+      [
+        "metal",
+        0.04544410482048988
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic454.jpg",
+    "actual": "plastic",
+    "predicted": "trash",
+    "confidence": 0.9365589022636414,
+    "top3": [
+      [
+        "trash",
+        0.9365589022636414
+      ],
+      [
+        "plastic",
+        0.0515708290040493
+      ],
+      [
+        "metal",
+        0.00827229768037796
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic456.jpg",
+    "actual": "plastic",
+    "predicted": "trash",
+    "confidence": 0.3841528594493866,
+    "top3": [
+      [
+        "trash",
+        0.3841528594493866
+      ],
+      [
+        "metal",
+        0.3484874367713928
+      ],
+      [
+        "plastic",
+        0.25923436880111694
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\cardboard\\cardboard302.jpg",
+    "actual": "cardboard",
+    "predicted": "glass",
+    "confidence": 0.5989669561386108,
+    "top3": [
+      [
+        "glass",
+        0.5989669561386108
+      ],
+      [
+        "cardboard",
+        0.1890636384487152
+      ],
+      [
+        "metal",
+        0.11777598410844803
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper94.jpg",
+    "actual": "paper",
+    "predicted": "cardboard",
+    "confidence": 0.8065499067306519,
+    "top3": [
+      [
+        "cardboard",
+        0.8065499067306519
+      ],
+      [
+        "paper",
+        0.17966040968894958
+      ],
+      [
+        "metal",
+        0.006904552690684795
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\cardboard\\cardboard392.jpg",
+    "actual": "cardboard",
+    "predicted": "paper",
+    "confidence": 0.5183876752853394,
+    "top3": [
+      [
+        "paper",
+        0.5183876752853394
+      ],
+      [
+        "cardboard",
+        0.3653672933578491
+      ],
+      [
+        "metal",
+        0.09916651248931885
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\cardboard\\cardboard49.jpg",
+    "actual": "cardboard",
+    "predicted": "trash",
+    "confidence": 0.8429436087608337,
+    "top3": [
+      [
+        "trash",
+        0.8429436087608337
+      ],
+      [
+        "cardboard",
+        0.1332004964351654
+      ],
+      [
+        "paper",
+        0.019143547862768173
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic4.jpg",
+    "actual": "plastic",
+    "predicted": "metal",
+    "confidence": 0.6496042013168335,
+    "top3": [
+      [
+        "metal",
+        0.6496042013168335
+      ],
+      [
+        "glass",
+        0.13081325590610504
+      ],
+      [
+        "trash",
+        0.1282690018415451
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper6.jpg",
+    "actual": "paper",
+    "predicted": "plastic",
+    "confidence": 0.43838420510292053,
+    "top3": [
+      [
+        "plastic",
+        0.43838420510292053
+      ],
+      [
+        "metal",
+        0.2252291440963745
+      ],
+      [
+        "cardboard",
+        0.21564887464046478
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\cardboard\\cardboard99.jpg",
+    "actual": "cardboard",
+    "predicted": "paper",
+    "confidence": 0.8543129563331604,
+    "top3": [
+      [
+        "paper",
+        0.8543129563331604
+      ],
+      [
+        "metal",
+        0.06733055412769318
+      ],
+      [
+        "plastic",
+        0.030190620571374893
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\glass\\glass141.jpg",
+    "actual": "glass",
+    "predicted": "metal",
+    "confidence": 0.8752208948135376,
+    "top3": [
+      [
+        "metal",
+        0.8752208948135376
+      ],
+      [
+        "glass",
+        0.11866183578968048
+      ],
+      [
+        "plastic",
+        0.00557983573526144
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic435.jpg",
+    "actual": "plastic",
+    "predicted": "glass",
+    "confidence": 0.5395844578742981,
+    "top3": [
+      [
+        "glass",
+        0.5395844578742981
+      ],
+      [
+        "plastic",
+        0.4515955448150635
+      ],
+      [
+        "trash",
+        0.0063540819101035595
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\glass\\glass404.jpg",
+    "actual": "glass",
+    "predicted": "metal",
+    "confidence": 0.6598764657974243,
+    "top3": [
+      [
+        "metal",
+        0.6598764657974243
+      ],
+      [
+        "glass",
+        0.11823137104511261
+      ],
+      [
+        "trash",
+        0.08529356867074966
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\metal\\metal369.jpg",
+    "actual": "metal",
+    "predicted": "trash",
+    "confidence": 0.48439526557922363,
+    "top3": [
+      [
+        "trash",
+        0.48439526557922363
+      ],
+      [
+        "metal",
+        0.23965850472450256
+      ],
+      [
+        "cardboard",
+        0.18082387745380402
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper394.jpg",
+    "actual": "paper",
+    "predicted": "trash",
+    "confidence": 0.44492876529693604,
+    "top3": [
+      [
+        "trash",
+        0.44492876529693604
+      ],
+      [
+        "metal",
+        0.3781451880931854
+      ],
+      [
+        "paper",
+        0.14351408183574677
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\cardboard\\cardboard110.jpg",
+    "actual": "cardboard",
+    "predicted": "trash",
+    "confidence": 0.5434597134590149,
+    "top3": [
+      [
+        "trash",
+        0.5434597134590149
+      ],
+      [
+        "cardboard",
+        0.44902503490448
+      ],
+      [
+        "metal",
+        0.002584523521363735
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\metal\\metal173.jpg",
+    "actual": "metal",
+    "predicted": "glass",
+    "confidence": 0.7106613516807556,
+    "top3": [
+      [
+        "glass",
+        0.7106613516807556
+      ],
+      [
+        "plastic",
+        0.20346958935260773
+      ],
+      [
+        "metal",
+        0.07434657216072083
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic264.jpg",
+    "actual": "plastic",
+    "predicted": "glass",
+    "confidence": 0.9026938676834106,
+    "top3": [
+      [
+        "glass",
+        0.9026938676834106
+      ],
+      [
+        "plastic",
+        0.09716688096523285
+      ],
+      [
+        "paper",
+        6.238981586648151e-05
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\metal\\metal103.jpg",
+    "actual": "metal",
+    "predicted": "trash",
+    "confidence": 0.5344577431678772,
+    "top3": [
+      [
+        "trash",
+        0.5344577431678772
+      ],
+      [
+        "metal",
+        0.43907424807548523
+      ],
+      [
+        "plastic",
+        0.025794265791773796
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\glass\\glass184.jpg",
+    "actual": "glass",
+    "predicted": "metal",
+    "confidence": 0.6623786687850952,
+    "top3": [
+      [
+        "metal",
+        0.6623786687850952
+      ],
+      [
+        "plastic",
+        0.24744169414043427
+      ],
+      [
+        "glass",
+        0.08641280978918076
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\cardboard\\cardboard128.jpg",
+    "actual": "cardboard",
+    "predicted": "paper",
+    "confidence": 0.8387678861618042,
+    "top3": [
+      [
+        "paper",
+        0.8387678861618042
+      ],
+      [
+        "cardboard",
+        0.06393042206764221
+      ],
+      [
+        "plastic",
+        0.05518367886543274
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper243.jpg",
+    "actual": "paper",
+    "predicted": "glass",
+    "confidence": 0.35785654187202454,
+    "top3": [
+      [
+        "glass",
+        0.35785654187202454
+      ],
+      [
+        "plastic",
+        0.35668957233428955
+      ],
+      [
+        "trash",
+        0.21565039455890656
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\glass\\glass304.jpg",
+    "actual": "glass",
+    "predicted": "metal",
+    "confidence": 0.2700483798980713,
+    "top3": [
+      [
+        "metal",
+        0.2700483798980713
+      ],
+      [
+        "paper",
+        0.2565139830112457
+      ],
+      [
+        "trash",
+        0.2487877458333969
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\glass\\glass265.jpg",
+    "actual": "glass",
+    "predicted": "plastic",
+    "confidence": 0.8723790049552917,
+    "top3": [
+      [
+        "plastic",
+        0.8723790049552917
+      ],
+      [
+        "glass",
+        0.12728486955165863
+      ],
+      [
+        "trash",
+        0.00022442491899710149
+      ]
+    ]
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\trash\\trash104.jpg",
+    "actual": "trash",
+    "predicted": "cardboard",
+    "confidence": 0.3907496929168701,
+    "top3": [
+      [
+        "cardboard",
+        0.3907496929168701
+      ],
+      [
+        "trash",
+        0.31872597336769104
+      ],
+      [
+        "metal",
+        0.2274436503648758
+      ]
+    ]
+  }
+]

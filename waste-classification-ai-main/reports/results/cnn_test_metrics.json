@@ -1,0 +1,57 @@
+{
+  "LABEL": "Final Local GPU CNN Training",
+  "model_name": "CNN_from_scratch",
+  "epochs_run": 30,
+  "best_epoch": 30,
+  "test_accuracy": 0.6368421052631579,
+  "test_precision_macro": 0.6649291253005071,
+  "test_recall_macro": 0.6579377202723866,
+  "test_f1_macro": 0.6213779546886833,
+  "test_precision_weighted": 0.7213192637698449,
+  "test_recall_weighted": 0.6368421052631579,
+  "test_f1_weighted": 0.6501104160139582,
+  "per_class": {
+    "cardboard": {
+      "precision": 0.8867924528301887,
+      "recall": 0.7833333333333333,
+      "f1-score": 0.831858407079646,
+      "support": 60.0
+    },
+    "glass": {
+      "precision": 0.5436893203883495,
+      "recall": 0.7368421052631579,
+      "f1-score": 0.6256983240223464,
+      "support": 76.0
+    },
+    "metal": {
+      "precision": 0.7222222222222222,
+      "recall": 0.41935483870967744,
+      "f1-score": 0.5306122448979592,
+      "support": 62.0
+    },
+    "paper": {
+      "precision": 0.9423076923076923,
+      "recall": 0.550561797752809,
+      "f1-score": 0.6950354609929078,
+      "support": 89.0
+    },
+    "plastic": {
+      "precision": 0.6233766233766234,
+      "recall": 0.6575342465753424,
+      "f1-score": 0.64,
+      "support": 73.0
+    },
+    "trash": {
+      "precision": 0.2711864406779661,
+      "recall": 0.8,
+      "f1-score": 0.4050632911392405,
+      "support": 20.0
+    }
+  },
+  "total_params": 390918,
+  "trainable_params": 390918,
+  "avg_epoch_time_sec": 26.5531565507253,
+  "total_training_time_sec": 796.594696521759,
+  "gpu_used": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "random_seed": 42
+}

@@ -1,0 +1,137 @@
+{
+  "test_accuracy_reverified": 0.9105263157894737,
+  "official_test_accuracy": 0.9105263157894737,
+  "total_test_images": 380,
+  "total_misclassified": 34,
+  "per_class_metrics": [
+    {
+      "class": "Cardboard",
+      "precision": 0.9642857142857143,
+      "recall": 0.9,
+      "f1": 0.9310344827586207,
+      "support": 60
+    },
+    {
+      "class": "Glass",
+      "precision": 0.9210526315789473,
+      "recall": 0.9210526315789473,
+      "f1": 0.9210526315789473,
+      "support": 76
+    },
+    {
+      "class": "Metal",
+      "precision": 0.8805970149253731,
+      "recall": 0.9516129032258065,
+      "f1": 0.9147286821705426,
+      "support": 62
+    },
+    {
+      "class": "Paper",
+      "precision": 0.9529411764705882,
+      "recall": 0.9101123595505618,
+      "f1": 0.9310344827586207,
+      "support": 89
+    },
+    {
+      "class": "Plastic",
+      "precision": 0.9545454545454546,
+      "recall": 0.863013698630137,
+      "f1": 0.9064748201438849,
+      "support": 73
+    },
+    {
+      "class": "Trash",
+      "precision": 0.6333333333333333,
+      "recall": 0.95,
+      "f1": 0.76,
+      "support": 20
+    }
+  ],
+  "top_confusion_pairs": [
+    {
+      "actual": "glass",
+      "predicted": "metal",
+      "count": 4
+    },
+    {
+      "actual": "paper",
+      "predicted": "trash",
+      "count": 4
+    },
+    {
+      "actual": "plastic",
+      "predicted": "metal",
+      "count": 3
+    },
+    {
+      "actual": "plastic",
+      "predicted": "glass",
+      "count": 3
+    },
+    {
+      "actual": "cardboard",
+      "predicted": "paper",
+      "count": 3
+    },
+    {
+      "actual": "plastic",
+      "predicted": "trash",
+      "count": 3
+    },
+    {
+      "actual": "metal",
+      "predicted": "trash",
+      "count": 2
+    },
+    {
+      "actual": "cardboard",
+      "predicted": "trash",
+      "count": 2
+    },
+    {
+      "actual": "glass",
+      "predicted": "plastic",
+      "count": 2
+    },
+    {
+      "actual": "cardboard",
+      "predicted": "glass",
+      "count": 1
+    },
+    {
+      "actual": "paper",
+      "predicted": "glass",
+      "count": 1
+    },
+    {
+      "actual": "metal",
+      "predicted": "glass",
+      "count": 1
+    },
+    {
+      "actual": "paper",
+      "predicted": "cardboard",
+      "count": 1
+    },
+    {
+      "actual": "paper",
+      "predicted": "metal",
+      "count": 1
+    },
+    {
+      "actual": "paper",
+      "predicted": "plastic",
+      "count": 1
+    },
+    {
+      "actual": "plastic",
+      "predicted": "paper",
+      "count": 1
+    },
+    {
+      "actual": "trash",
+      "predicted": "cardboard",
+      "count": 1
+    }
+  ]
+}

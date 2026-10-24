@@ -1,0 +1,31 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Raw dataset images & large feature caches (downloadable / generated via scripts)
+waste-classification-ai-main/data/raw/*
+!waste-classification-ai-main/data/raw/.gitkeep
+waste-classification-ai-main/data/processed/*
+!waste-classification-ai-main/data/processed/.gitkeep
+!waste-classification-ai-main/data/processed/splits.csv
+
+# Model binary weights (keep reloop_resnet50_calibrated.pt which is 90.25MB, under GitHub's 100MB limit)
+waste-classification-ai-main/models/*.pt
+!waste-classification-ai-main/models/.gitkeep
+!waste-classification-ai-main/models/model_metadata.json
+!waste-classification-ai-main/models/reloop_resnet50_calibrated.pt
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
+*.log

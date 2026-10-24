@@ -1,0 +1,50 @@
+{
+  "CNN": {
+    "model_size_mb": 1.5056772232055664,
+    "single_image_latency_ms_mean": 1.0933629982173443,
+    "single_image_latency_ms_median": 0.7621999830007553,
+    "single_image_latency_ms_std": 0.6643582584874527,
+    "batch32_latency_ms_mean": 30.001189990434796,
+    "batch32_per_image_ms": 0.9375371872010874,
+    "n_warmup_runs": 10,
+    "n_timed_runs": 100,
+    "device": "cuda",
+    "gpu_used": "NVIDIA GeForce RTX 4050 Laptop GPU"
+  },
+  "MobileNetV2": {
+    "model_size_mb": 8.74909496307373,
+    "single_image_latency_ms_mean": 6.314161994960159,
+    "single_image_latency_ms_median": 6.139650009572506,
+    "single_image_latency_ms_std": 1.2579916046423556,
+    "batch32_latency_ms_mean": 32.861014967784286,
+    "batch32_per_image_ms": 1.026906717743259,
+    "n_warmup_runs": 10,
+    "n_timed_runs": 100,
+    "device": "cuda",
+    "gpu_used": "NVIDIA GeForce RTX 4050 Laptop GPU"
+  },
+  "EfficientNet-B0": {
+    "model_size_mb": 15.606022834777832,
+    "single_image_latency_ms_mean": 12.591162992175668,
+    "single_image_latency_ms_median": 11.30749995354563,
+    "single_image_latency_ms_std": 5.296336382609697,
+    "batch32_latency_ms_mean": 41.62439996143803,
+    "batch32_per_image_ms": 1.3007624987949384,
+    "n_warmup_runs": 10,
+    "n_timed_runs": 100,
+    "device": "cuda",
+    "gpu_used": "NVIDIA GeForce RTX 4050 Laptop GPU"
+  },
+  "ResNet50": {
+    "model_size_mb": 90.02804851531982,
+    "single_image_latency_ms_mean": 7.2666290029883385,
+    "single_image_latency_ms_median": 6.897100014612079,
+    "single_image_latency_ms_std": 1.4870808329187335,
+    "batch32_latency_ms_mean": 97.80250998446718,
+    "batch32_per_image_ms": 3.0563284370145993,
+    "n_warmup_runs": 10,
+    "n_timed_runs": 100,
+    "device": "cuda",
+    "gpu_used": "NVIDIA GeForce RTX 4050 Laptop GPU"
+  }
+}

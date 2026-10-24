@@ -1,0 +1,82 @@
+[
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\cardboard\\cardboard60.jpg",
+    "actual": "cardboard",
+    "predicted": "cardboard",
+    "confidence": 0.9999959468841553,
+    "kind": "high_confidence_correct",
+    "figure": "reports\\figures\\gradcam\\01_high_confidence_correct_cardboard_to_cardboard.png"
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\glass\\glass130.jpg",
+    "actual": "glass",
+    "predicted": "glass",
+    "confidence": 0.9999575614929199,
+    "kind": "high_confidence_correct",
+    "figure": "reports\\figures\\gradcam\\02_high_confidence_correct_glass_to_glass.png"
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\metal\\metal386.jpg",
+    "actual": "metal",
+    "predicted": "metal",
+    "confidence": 0.9998791217803955,
+    "kind": "high_confidence_correct",
+    "figure": "reports\\figures\\gradcam\\03_high_confidence_correct_metal_to_metal.png"
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper157.jpg",
+    "actual": "paper",
+    "predicted": "paper",
+    "confidence": 0.9999595880508423,
+    "kind": "high_confidence_correct",
+    "figure": "reports\\figures\\gradcam\\04_high_confidence_correct_paper_to_paper.png"
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic429.jpg",
+    "actual": "plastic",
+    "predicted": "plastic",
+    "confidence": 0.9999821186065674,
+    "kind": "high_confidence_correct",
+    "figure": "reports\\figures\\gradcam\\05_high_confidence_correct_plastic_to_plastic.png"
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\trash\\trash74.jpg",
+    "actual": "trash",
+    "predicted": "trash",
+    "confidence": 0.9999961853027344,
+    "kind": "high_confidence_correct",
+    "figure": "reports\\figures\\gradcam\\06_high_confidence_correct_trash_to_trash.png"
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic259.jpg",
+    "actual": "plastic",
+    "predicted": "metal",
+    "confidence": 0.781822681427002,
+    "kind": "incorrect",
+    "figure": "reports\\figures\\gradcam\\07_incorrect_plastic_to_metal.png"
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper592.jpg",
+    "actual": "paper",
+    "predicted": "trash",
+    "confidence": 0.5986679792404175,
+    "kind": "incorrect",
+    "figure": "reports\\figures\\gradcam\\08_incorrect_paper_to_trash.png"
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\plastic\\plastic199.jpg",
+    "actual": "plastic",
+    "predicted": "glass",
+    "confidence": 0.9767478108406067,
+    "kind": "incorrect",
+    "figure": "reports\\figures\\gradcam\\09_incorrect_plastic_to_glass.png"
+  },
+  {
+    "path": "C:\\Users\\Martin\\Downloads\\Amit Data Science\\projects\\Deep Learning Project\\data\\raw\\dataset-resized\\paper\\paper225.jpg",
+    "actual": "paper",
+    "predicted": "trash",
+    "confidence": 0.4443490505218506,
+    "kind": "incorrect",
+    "figure": "reports\\figures\\gradcam\\10_incorrect_paper_to_trash.png"
+  }
+]

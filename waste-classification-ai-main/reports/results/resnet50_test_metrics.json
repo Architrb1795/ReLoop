@@ -1,0 +1,65 @@
+{
+  "model_name": "resnet50",
+  "oom_error": false,
+  "stage_a_epochs_run": 10,
+  "stage_a_best_epoch": 8,
+  "stage_a_best_val_loss": 0.6050054770660903,
+  "stage_a_best_val_acc": 0.8153034300791556,
+  "stage_a_time_sec": 258.1363034248352,
+  "stage_b_epochs_run": 15,
+  "stage_b_time_sec": 420.7577290534973,
+  "best_epoch_combined": 24,
+  "total_training_time_sec": 678.8940324783325,
+  "test_accuracy": 0.9105263157894737,
+  "test_precision_macro": 0.8844592208565686,
+  "test_recall_macro": 0.9159652654975755,
+  "test_f1_macro": 0.8940541832351027,
+  "test_precision_weighted": 0.9200379140444296,
+  "test_recall_weighted": 0.9105263157894737,
+  "test_f1_weighted": 0.9126578370950308,
+  "per_class": {
+    "cardboard": {
+      "precision": 0.9642857142857143,
+      "recall": 0.9,
+      "f1-score": 0.9310344827586207,
+      "support": 60.0
+    },
+    "glass": {
+      "precision": 0.9210526315789473,
+      "recall": 0.9210526315789473,
+      "f1-score": 0.9210526315789473,
+      "support": 76.0
+    },
+    "metal": {
+      "precision": 0.8805970149253731,
+      "recall": 0.9516129032258065,
+      "f1-score": 0.9147286821705426,
+      "support": 62.0
+    },
+    "paper": {
+      "precision": 0.9529411764705882,
+      "recall": 0.9101123595505618,
+      "f1-score": 0.9310344827586207,
+      "support": 89.0
+    },
+    "plastic": {
+      "precision": 0.9545454545454546,
+      "recall": 0.863013698630137,
+      "f1-score": 0.9064748201438849,
+      "support": 73.0
+    },
+    "trash": {
+      "precision": 0.6333333333333333,
+      "recall": 0.95,
+      "f1-score": 0.76,
+      "support": 20.0
+    }
+  },
+  "total_params": 23520326,
+  "trainable_params_stage_a": 12294,
+  "trainable_params_stage_b": 14977030,
+  "model_size_mb": 90.02804851531982,
+  "peak_gpu_memory_mb": 618.92431640625,
+  "gpu_used": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "random_seed": 42
+}

@@ -1,0 +1,48 @@
+# Dataset (downloaded automatically via src/data.download — do not commit)
+data/raw/*
+!data/raw/.gitkeep
+
+# Processed data: keep the split manifest (small, human-readable, documents the
+# exact reproducible train/val/test assignment) but not any other generated data
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/splits.csv
+
+# Trained model weights (large binaries, kept out of git in general).
+# model_metadata.json is small config, not a binary checkpoint, so it's kept.
+# resnet50_best.pt is the one checkpoint app/streamlit_app.py actually loads at
+# runtime, so it's tracked in git too (90MB, under GitHub's 100MB hard limit) --
+# this is what lets Streamlit Community Cloud find it after cloning the repo.
+# The other experimental checkpoints (cnn/mobilenet/efficientnet/archive) stay
+# out of git since the deployed app never touches them.
+models/*
+!models/.gitkeep
+!models/model_metadata.json
+!models/reloop_resnet50_calibrated.pt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code tooling (local dev-server config, not part of the portfolio project)
+.claude/
+
+# Logs / misc
+*.log
+.pytest_cache/

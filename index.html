@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReLoop — Waste. Reward. Repeat.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar (Clean Website Header + 2 Primary Product Tabs) -->
+  <header class="site-navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="brand-link" aria-label="ReLoop Home">
+        <div class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 2.1l4 4-4 4"/>
+            <path d="M3 12.2v-2a4 4 0 0 1 4-4h12.8M7 21.9l-4-4 4-4"/>
+            <path d="M21 11.8v2a4 4 0 0 1-4 4H4.2"/>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-name">ReLoop</span>
+          <span class="brand-tagline-mini">Waste. Reward. Repeat.</span>
+        </div>
+      </a>
+
+      <!-- Exclusively Two Primary Product Tabs -->
+      <nav class="nav-tabs-group" role="tablist" aria-label="ReLoop Product Interfaces">
+        <button
+          type="button"
+          class="primary-tab-btn active"
+          id="navTabRvm"
+          role="tab"
+          aria-selected="true"
+          aria-controls="pane-rvm"
+          onclick="switchProductTab('rvm')"
+        >
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 5v2M12 17v2M5 12h2M17 12h2"/>
+          </svg>
+          <span>RVM Machine</span>
+        </button>
+        <button
+          type="button"
+          class="primary-tab-btn"
+          id="navTabStudent"
+          role="tab"
+          aria-selected="false"
+          aria-controls="pane-student"
+          onclick="switchProductTab('student')"
+        >
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/>
+            <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/>
+            <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"/>
+          </svg>
+          <span>Student App</span>
+        </button>
+      </nav>
+
+      <div class="nav-links-secondary">
+        <a href="#how-it-works" class="nav-anchor">How It Works</a>
+        <a href="#innovation" class="nav-anchor">Why ReLoop</a>
+        <a href="#impact" class="nav-anchor">Impact</a>
+        <button type="button" class="nav-points-pill" onclick="switchProductTab('student')" title="Open Student App Wallet">
+          <span class="pts-dot"></span>
+          <span id="navPointsDisplay">1,280 pts</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Main Landing Experience -->
+  <section class="hero-section">
+    <!-- Subtle Connected-Ecosystem Decorative Network SVG -->
+    <svg class="ecosystem-decor-svg" viewBox="0 0 1440 420" fill="none" aria-hidden="true">
+      <path d="M-40 340 C 260 220, 480 410, 820 290 C 1100 190, 1280 280, 1490 160" stroke="#E5E7EB" stroke-width="1.5" stroke-dasharray="5 5"/>
+      <path d="M1120 -20 C 1190 120, 1340 160, 1460 90" stroke="#B7F000" stroke-width="2.5" opacity="0.55"/>
+      <circle cx="1180" cy="78" r="10" stroke="#7C3AED" stroke-width="2" opacity="0.45"/>
+      <circle cx="140" cy="64" r="7" stroke="#7C3AED" stroke-width="2" opacity="0.35"/>
+      <circle cx="820" cy="290" r="4" fill="#3B82F6" opacity="0.4"/>
+      <circle cx="380" cy="310" r="4" fill="#111827" opacity="0.2"/>
+    </svg>
+
+    <div class="container hero-grid">
+      <div>
+        <div class="philosophy-pill">
+          <span class="dot-purple"></span>
+          <span>"Don't ask people to care about waste. Give them a reason to."</span>
+        </div>
+        <h1 class="hero-heading">
+          Waste. <span class="lime-highlight">Reward.</span> Repeat.
+        </h1>
+        <p class="hero-subtitle">
+          AI-powered waste segregation that turns responsible disposal into real-world rewards.
+        </p>
+        <div class="hero-cta-row">
+          <button type="button" class="btn btn-lime" onclick="startEarningAction()">
+            <span>Start Earning</span>
+            <span aria-hidden="true">→</span>
+          </button>
+          <a href="#how-it-works" class="btn btn-outline">
+            See How It Works
+          </a>
+        </div>
+      </div>
+
+      <!-- Connected Visual Process: Waste -> AI -> Sorting -> Rewards -> Recycling -->
+      <div class="hero-flow-card">
+        <div class="hero-flow-label">
+          <span>Connected Campus Ecosystem</span>
+          <span class="badge badge-purple">Closed-Loop System</span>
+        </div>
+        <div class="hero-chain-steps">
+          <div class="chain-node">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+            </div>
+            <div class="chain-node-title">Waste</div>
+            <div class="chain-node-sub">Campus item</div>
+          </div>
+
+          <div class="chain-node">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+            </div>
+            <div class="chain-node-title">AI</div>
+            <div class="chain-node-sub">Vision + OOD</div>
+          </div>
+
+          <div class="chain-node">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+            </div>
+            <div class="chain-node-title">Sorting</div>
+            <div class="chain-node-sub">Safe routing</div>
+          </div>
+
+          <div class="chain-node">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div class="chain-node-title">Rewards</div>
+            <div class="chain-node-sub">ReLoop Points</div>
+          </div>
+
+          <div class="chain-node">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.1l4 4-4 4"/><path d="M3 12.2v-2a4 4 0 0 1 4-4h12.8M7 21.9l-4-4 4-4"/><path d="M21 11.8v2a4 4 0 0 1-4 4H4.2"/></svg>
+            </div>
+            <div class="chain-node-title">Recycling</div>
+            <div class="chain-node-sub">Clean recovery</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PRIMARY INTERACTIVE WORKSPACE (TAB 1: RVM MACHINE | TAB 2: STUDENT APP)
+       ======================================================================== -->
+  <main class="workspace-section" id="workspace">
+    <div class="container">
+
+      <!-- Workspace Header & Two-Tab Switcher -->
+      <div class="workspace-header-bar">
+        <div>
+          <div class="card-kicker">Interactive Product Workspace</div>
+          <h2 class="card-heading" style="font-size:1.45rem;" id="workspaceTitle">
+            ReLoop RVM Console — AI Waste Identification & Verified Segregation
+          </h2>
+        </div>
+
+        <div class="workspace-tab-switcher" role="tablist" aria-label="Switch between RVM Machine and Student App">
+          <button
+            type="button"
+            class="workspace-tab active"
+            id="wsTabRvm"
+            onclick="switchProductTab('rvm')"
+          >
+            <span class="tab-dot"></span>
+            <span>RVM Machine</span>
+          </button>
+          <button
+            type="button"
+            class="workspace-tab"
+            id="wsTabStudent"
+            onclick="switchProductTab('student')"
+          >
+            <span class="tab-dot"></span>
+            <span>Student App</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           PANE 1: RVM MACHINE INTERFACE
+           ==================================================================== -->
+      <section class="product-pane active" id="pane-rvm" role="tabpanel" aria-labelledby="navTabRvm">
+        <div class="rvm-console-grid">
+
+          <!-- Left Card: Optical Intake (Upload Image or Live Camera) -->
+          <div class="reloop-card">
+            <div class="reloop-card-header">
+              <div>
+                <div class="card-kicker">Step 1 • Optical Chamber Intake</div>
+                <h3 class="card-heading">Present Waste Item</h3>
+              </div>
+              <span class="badge badge-lime" id="engineStatusBadge">AI Model Ready</span>
+            </div>
+
+            <!-- Input Source Switcher -->
+            <div class="input-mode-bar">
+              <button
+                type="button"
+                class="input-mode-btn active"
+                id="modeBtnUpload"
+                onclick="setInputSourceMode('upload')"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <span>Upload Image</span>
+              </button>
+              <button
+                type="button"
+                class="input-mode-btn"
+                id="modeBtnCamera"
+                onclick="setInputSourceMode('camera')"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <span>Live Camera</span>
+              </button>
+            </div>
+
+            <!-- Optical Viewport -->
+            <div class="rvm-viewport-frame" id="rvmViewportFrame">
+              <div class="viewport-loading-overlay" id="viewportLoadingOverlay">
+                <div class="spinner-ring"></div>
+                <span id="viewportLoadingText">Analyzing item with ReLoop Vision...</span>
+              </div>
+
+              <img id="uploadedImagePreview" alt="Uploaded waste item preview" />
+              <video id="liveCameraVideo" autoplay playsinline muted></video>
+              <canvas id="cameraCaptureCanvas" style="display:none;"></canvas>
+
+              <div class="viewport-empty-state" id="viewportEmptyState">
+                <div class="icon-circle-lime" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                </div>
+                <div style="font-weight:700; font-size:0.98rem; color:var(--reloop-navy);" id="emptyStateTitle">
+                  Upload a waste photo or select a sample below
+                </div>
+                <p style="font-size:0.82rem; color:var(--text-muted);" id="emptyStateSub">
+                  Supports JPG, PNG, and WEBP (up to 10 MB). Recognizes Cardboard, Glass, Metal, Paper, Plastic, and Residual Wrappers — and safely rejects unknown objects such as stones.
+                </p>
+              </div>
+            </div>
+
+            <!-- Upload Controls -->
+            <div id="uploadControlsGroup" style="margin-top:14px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+              <label class="btn btn-lime" style="cursor:pointer;">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <span>Choose Image File</span>
+                <input
+                  type="file"
+                  id="fileUploadInput"
+                  accept="image/jpeg,image/png,image/webp"
+                  style="display:none;"
+                  onchange="handleFileInputChange(event)"
+                />
+              </label>
+              <button type="button" class="btn btn-outline btn-sm" onclick="resetRvmInspection()">
+                Clear / Reset
+              </button>
+            </div>
+
+            <!-- Live Camera Controls -->
+            <div id="cameraControlsGroup" style="margin-top:14px; display:none; flex-wrap:wrap; gap:8px; align-items:center;">
+              <button type="button" class="btn btn-lime btn-sm" id="btnStartCamera" onclick="startLiveCamera()">
+                Start Camera
+              </button>
+              <button type="button" class="btn btn-navy btn-sm" id="btnCaptureFrame" onclick="captureAndClassifyCameraFrame()" disabled>
+                Identify Current Frame
+              </button>
+              <button type="button" class="btn btn-outline btn-sm" id="btnToggleAutoScan" onclick="toggleContinuousCameraScan()" disabled>
+                Auto-Scan: Off
+              </button>
+              <button type="button" class="btn btn-outline btn-sm" id="btnStopCamera" onclick="stopLiveCamera()" disabled>
+                Stop Camera
+              </button>
+            </div>
+            <div id="cameraErrorNotice" style="display:none; margin-top:10px; padding:10px 12px; border-radius:8px; background:var(--status-error-bg); color:var(--status-error-text); font-size:0.82rem; font-weight:600;"></div>
+
+            <!-- One-Click Held-Out Test & OOD Verification Samples -->
+            <div class="sample-test-strip">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="card-kicker">Try Held-Out Test & Rejection Samples</span>
+                <span style="font-size:0.72rem; color:var(--text-muted);">Runs real backend inference</span>
+              </div>
+              <div class="sample-chips-grid">
+                <button type="button" class="sample-chip" onclick="runBackendTestSample('plastic')">Plastic Bottle</button>
+                <button type="button" class="sample-chip" onclick="runBackendTestSample('paper')">Paper</button>
+                <button type="button" class="sample-chip" onclick="runBackendTestSample('metal')">Aluminium Can</button>
+                <button type="button" class="sample-chip" onclick="runBackendTestSample('glass')">Glass</button>
+                <button type="button" class="sample-chip" onclick="runBackendTestSample('cardboard')">Cardboard</button>
+                <button type="button" class="sample-chip" onclick="runBackendTestSample('trash')">Residual Wrapper</button>
+                <button type="button" class="sample-chip ood-chip" onclick="runBackendTestSample('stone')">🪨 Stone (Unknown Object)</button>
+                <button type="button" class="sample-chip ood-chip" onclick="runBackendTestSample('poor_quality')">🌑 Dark / Poor Quality</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Card: Recognition Outcome, Safe Rejection & Simulated Segregation -->
+          <div class="reloop-card">
+            <div class="reloop-card-header">
+              <div>
+                <div class="card-kicker">Step 2 • Identification & Segregation Decision</div>
+                <h3 class="card-heading">RVM Console Status</h3>
+              </div>
+              <span class="badge badge-neutral" id="resultStateBadge">Awaiting Item</span>
+            </div>
+
+            <!-- Dynamic Result Banner -->
+            <div class="result-state-banner" id="resultStateBanner">
+              <div style="font-size:0.74rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-muted);" id="resultCategoryKicker">
+                Machine Standby
+              </div>
+              <div style="font-family:var(--font-display); font-size:1.35rem; font-weight:800; color:var(--reloop-navy); margin-top:4px;" id="resultMainHeading">
+                Present an item to begin
+              </div>
+              <p style="font-size:0.86rem; color:var(--text-secondary); margin-top:6px;" id="resultExplanationText">
+                Upload a waste image or use the live camera. ReLoop will classify supported waste items or safely reject unknown objects before actuating the sorting gate.
+              </p>
+
+              <!-- Confidence Bar -->
+              <div class="confidence-meter-wrap" id="confidenceMeterWrap" style="display:none;">
+                <div style="display:flex; justify-content:space-between; font-size:0.78rem; font-weight:700; margin-bottom:5px;">
+                  <span id="confidenceLabelText">Calibrated Confidence</span>
+                  <span id="confidenceValueText">0.0%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" id="confidenceBarFill" style="width:0%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top-3 Class Breakdown (Diagnostic) -->
+            <div id="topPredictionsSection" style="display:none; margin-bottom:16px;">
+              <div class="card-kicker" style="margin-bottom:8px;">Model Class Probabilities</div>
+              <div id="topPredictionsList" style="display:flex; flex-direction:column; gap:6px;"></div>
+            </div>
+
+            <!-- Simulated Physical Segregation & Verified Deposit Box -->
+            <div class="rvm-sorting-panel">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+                <span class="card-kicker">Step 3 • RVM Sorting & Disposal Verification</span>
+                <span class="badge badge-purple" title="Physical actuator is simulated in web mode">Software Simulation</span>
+              </div>
+
+              <div class="sorting-details-grid">
+                <div class="sorting-detail-item">
+                  <div class="lbl">Sorting Gate Decision</div>
+                  <div class="val" id="sortingActionText">Gate Locked (Standby)</div>
+                </div>
+                <div class="sorting-detail-item">
+                  <div class="lbl">Destination Stream</div>
+                  <div class="val" id="sortingStreamText">—</div>
+                </div>
+                <div class="sorting-detail-item">
+                  <div class="lbl">Eligible Reward</div>
+                  <div class="val" id="eligiblePointsText">0 ReLoop Points</div>
+                </div>
+                <div class="sorting-detail-item">
+                  <div class="lbl">Disposal Guidance</div>
+                  <div class="val" style="font-size:0.8rem; font-weight:600;" id="disposalGuidanceText">Awaiting valid waste recognition.</div>
+                </div>
+              </div>
+
+              <div style="margin-top:14px; display:flex; flex-wrap:wrap; gap:10px; align-items:center;">
+                <button
+                  type="button"
+                  class="btn btn-lime"
+                  id="btnConfirmDeposit"
+                  style="width:100%;"
+                  onclick="confirmSimulatedDeposit()"
+                  disabled
+                >
+                  <span>Confirm Simulated Deposit & Issue Points</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+              </div>
+              <p style="font-size:0.75rem; color:var(--text-muted); margin-top:8px; text-align:center;" id="depositIntegrityNote">
+                Points are issued only after a recognized item completes verified (simulated) deposit. Unknown or uncertain items cannot earn points.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PANE 2: STUDENT APP WORKSPACE
+           ==================================================================== -->
+      <section class="product-pane" id="pane-student" role="tabpanel" aria-labelledby="navTabStudent">
+
+        <!-- Honest Demo Account Notice -->
+        <div class="demo-mode-notice">
+          <div>
+            <strong style="color:var(--reloop-navy);">Demo Student Workspace (Archit • Campus ID #RL-2048):</strong>
+            Initial metrics (`1,280 ReLoop Points`, `12.4 kg` disposed, `8.7 kg` recovered, `24` disposals) represent sample baseline data. Depositing verified items in the <b>RVM Machine</b> tab updates this wallet in real time.
+          </div>
+          <button type="button" class="btn btn-outline btn-sm" onclick="switchProductTab('rvm')">
+            + Deposit Waste at RVM
+          </button>
+        </div>
+
+        <!-- Your Impact (4 Key Metrics) -->
+        <div class="impact-stats-grid">
+          <div class="metric-card featured-lime">
+            <div class="card-kicker" style="color:#D1D5DB;">ReLoop Wallet Balance</div>
+            <div class="metric-value" id="studentPointsMetric">1,280</div>
+            <div class="metric-label">ReLoop Points</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="card-kicker">Verified Mass</div>
+            <div class="metric-value" id="studentDisposedKgMetric">12.4 kg</div>
+            <div class="metric-label">Waste correctly disposed</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="card-kicker">Clean Stream</div>
+            <div class="metric-value" id="studentRecoveredKgMetric">8.7 kg</div>
+            <div class="metric-label">Material recovered</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="card-kicker">Verified Count</div>
+            <div class="metric-value" id="studentDisposalCountMetric">24</div>
+            <div class="metric-label">Successful disposals</div>
+          </div>
+        </div>
+
+        <!-- Student Main Grid: Rewards Wallet + Recent Activity -->
+        <div class="student-main-grid">
+
+          <!-- ReLoop Wallet and Rewards -->
+          <div class="reloop-card">
+            <div class="reloop-card-header">
+              <div>
+                <div class="card-kicker">ReLoop Wallet & Campus Perks</div>
+                <h3 class="card-heading">Available Rewards</h3>
+              </div>
+              <span class="badge badge-purple">Demo Catalog</span>
+            </div>
+
+            <!-- Progress Toward Next Milestone -->
+            <div style="background:var(--bg-secondary); border:1px solid var(--border-light); border-radius:var(--radius-md); padding:14px 16px;">
+              <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.84rem; font-weight:700; margin-bottom:6px;">
+                <span style="color:var(--reloop-navy);">Progress toward Campus Gold Reward Tier (1,600 pts)</span>
+                <span style="color:var(--reloop-purple);" id="rewardProgressPctText">80%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="rewardProgressBarFill" style="width:80%;"></div>
+              </div>
+              <div style="font-size:0.75rem; color:var(--text-muted); margin-top:6px;" id="rewardProgressSubText">
+                1,280 / 1,600 ReLoop Points (Illustrative demo target progress; updates as you deposit items)
+              </div>
+            </div>
+
+            <!-- Sample Reward Cards -->
+            <div class="rewards-cards-grid">
+              <div class="voucher-card">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span class="badge badge-lime">500 pts</span>
+                    <span style="font-size:0.7rem; color:var(--text-muted); font-weight:600;">Demo Preview</span>
+                  </div>
+                  <div style="font-family:var(--font-display); font-weight:800; font-size:1rem; color:var(--reloop-navy);">₹50 Canteen Voucher</div>
+                  <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">Applicable on meals and snacks at participating campus canteens.</p>
+                </div>
+                <button type="button" class="btn btn-outline btn-sm" disabled title="Merchant voucher redemption is disabled in demo preview mode">
+                  Demo Preview Only
+                </button>
+              </div>
+
+              <div class="voucher-card">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span class="badge badge-lime">300 pts</span>
+                    <span style="font-size:0.7rem; color:var(--text-muted); font-weight:600;">Demo Preview</span>
+                  </div>
+                  <div style="font-family:var(--font-display); font-weight:800; font-size:1rem; color:var(--reloop-navy);">Free Coffee</div>
+                  <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">Hot filter coffee or espresso at campus beverage kiosks.</p>
+                </div>
+                <button type="button" class="btn btn-outline btn-sm" disabled title="Merchant voucher redemption is disabled in demo preview mode">
+                  Demo Preview Only
+                </button>
+              </div>
+
+              <div class="voucher-card">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span class="badge badge-lime">250 pts</span>
+                    <span style="font-size:0.7rem; color:var(--text-muted); font-weight:600;">Demo Preview</span>
+                  </div>
+                  <div style="font-family:var(--font-display); font-weight:800; font-size:1rem; color:var(--reloop-navy);">Stationery Coupon</div>
+                  <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">Notebooks, printing credits, and lab supplies at the campus co-op.</p>
+                </div>
+                <button type="button" class="btn btn-outline btn-sm" disabled title="Merchant voucher redemption is disabled in demo preview mode">
+                  Demo Preview Only
+                </button>
+              </div>
+
+              <div class="voucher-card">
+                <div>
+                  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                    <span class="badge badge-lime">400 pts</span>
+                    <span style="font-size:0.7rem; color:var(--text-muted); font-weight:600;">Demo Preview</span>
+                  </div>
+                  <div style="font-family:var(--font-display); font-weight:800; font-size:1rem; color:var(--reloop-navy);">Event Discount</div>
+                  <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:4px;">Priority pass discounts for college fests, workshops, and screenings.</p>
+                </div>
+                <button type="button" class="btn btn-outline btn-sm" disabled title="Merchant voucher redemption is disabled in demo preview mode">
+                  Demo Preview Only
+                </button>
+              </div>
+
+              <div class="voucher-card" style="grid-column: 1 / -1;">
+                <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;">
+                  <div>
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                      <span class="badge badge-lime">600 pts</span>
+                      <span style="font-size:0.7rem; color:var(--text-muted); font-weight:600;">Demo Preview</span>
+                    </div>
+                    <div style="font-family:var(--font-display); font-weight:800; font-size:1rem; color:var(--reloop-navy);">Partner Offers</div>
+                    <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:2px;">Sustainable brand discounts and local campus merchant partner perks.</p>
+                  </div>
+                  <button type="button" class="btn btn-outline btn-sm" disabled title="Merchant voucher redemption is disabled in demo preview mode">
+                    Demo Preview Only
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Disposal Activity -->
+          <div class="reloop-card">
+            <div class="reloop-card-header">
+              <div>
+                <div class="card-kicker">Verified Ledger</div>
+                <h3 class="card-heading">Recent Activity</h3>
+              </div>
+              <span class="badge badge-neutral" id="activityCountBadge">3 Records</span>
+            </div>
+            <div class="activity-list" id="studentActivityList">
+              <!-- Populated by app.js -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       SECTION 19: CORE WASTE-TO-VALUE FLOW (5 CONNECTED STEPS)
+       ======================================================================== -->
+  <section class="section-block alt-bg" id="how-it-works">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-kicker">Core Waste-to-Value Flow</div>
+        <h2 class="section-title">How ReLoop Closes the Loop</h2>
+      </div>
+
+      <div class="five-steps-grid">
+        <div class="step-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <span class="step-number-badge">Step 01 →</span>
+          </div>
+          <h3 class="step-title">IDENTIFY</h3>
+          <p class="step-desc">AI recognizes the waste item and checks image quality and open-set validity.</p>
+        </div>
+
+        <div class="step-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+            </div>
+            <span class="step-number-badge">Step 02 →</span>
+          </div>
+          <h3 class="step-title">SEGREGATE</h3>
+          <p class="step-desc">The system routes the item to the appropriate destination, or safely rejects uncertain items.</p>
+        </div>
+
+        <div class="step-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <span class="step-number-badge">Step 03 →</span>
+          </div>
+          <h3 class="step-title">REWARD</h3>
+          <p class="step-desc">Verified disposal can earn ReLoop Points credited to the student wallet.</p>
+        </div>
+
+        <div class="step-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <span class="step-number-badge">Step 04 →</span>
+          </div>
+          <h3 class="step-title">RECOVER</h3>
+          <p class="step-desc">Suitable recovered material enters the clean recycling stream without cross-contamination.</p>
+        </div>
+
+        <div class="step-card">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 2.1l4 4-4 4"/><path d="M3 12.2v-2a4 4 0 0 1 4-4h12.8M7 21.9l-4-4 4-4"/><path d="M21 11.8v2a4 4 0 0 1-4 4H4.2"/></svg>
+            </div>
+            <span class="step-number-badge">Step 05 ↺</span>
+          </div>
+          <h3 class="step-title">REPEAT</h3>
+          <p class="step-desc">Recovered value can support the campus reward ecosystem and sustain repeat participation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 23: INNOVATION DIFFERENTIATOR
+       ======================================================================== -->
+  <section class="section-block" id="innovation">
+    <div class="container">
+      <div class="innovation-callout">
+        <div class="section-kicker" style="color:var(--reloop-lime);">Core Product Differentiator</div>
+        <h2 class="innovation-quote">
+          "Most smart bins stop at SORT.<br />
+          <span class="lime-text">ReLoop continues until VALUE."</span>
+        </h2>
+
+        <div class="innovation-equation">
+          <span>AI Identification</span>
+          <span style="color:var(--reloop-lime);">+</span>
+          <span>Physical Sorting</span>
+          <span style="color:var(--reloop-lime);">+</span>
+          <span>Verified Disposal</span>
+          <span style="color:var(--reloop-lime);">=</span>
+          <span style="color:var(--reloop-lime);">ReLoop's Waste-to-Value System</span>
+        </div>
+
+        <div class="system-readiness-grid">
+          <div class="readiness-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <strong style="font-size:0.9rem;">1. AI Identification</strong>
+              <span class="badge badge-lime">Operational</span>
+            </div>
+            <p style="font-size:0.8rem; color:#D1D5DB;">
+              Calibrated ResNet50 classifier with multi-view inference, image-quality checks, and open-set rejection of unknown objects.
+            </p>
+          </div>
+
+          <div class="readiness-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <strong style="font-size:0.9rem;">2. Physical Sorting</strong>
+              <span class="badge badge-purple" style="background:rgba(139,92,246,0.25); color:#DDD6FE;">Simulated in Web UI</span>
+            </div>
+            <p style="font-size:0.8rem; color:#D1D5DB;">
+              Sorting gate routing and safe reject compartment decisions are simulated in the browser console; microcontroller firmware is maintained in the repository.
+            </p>
+          </div>
+
+          <div class="readiness-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+              <strong style="font-size:0.9rem;">3. Verified Disposal</strong>
+              <span class="badge badge-lime">Session Verified</span>
+            </div>
+            <p style="font-size:0.8rem; color:#D1D5DB;">
+              Separates recognition from reward issuance: points are only granted after an accepted item completes simulated deposit verification.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 22: THREE CONNECTED IMPACT LOOPS
+       ======================================================================== -->
+  <section class="section-block alt-bg" id="impact">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-kicker">Systemic Campus Impact</div>
+        <h2 class="section-title">Three Connected Loops</h2>
+      </div>
+
+      <div class="impact-loops-grid">
+        <!-- Loop 1: Environmental -->
+        <div class="loop-card">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            </div>
+            <div>
+              <div class="card-kicker">Loop 01</div>
+              <h3 class="card-heading">Environmental</h3>
+            </div>
+          </div>
+          <div class="loop-flow-pills">
+            <div class="loop-step-pill"><span>1.</span> <span>Less waste mixing at source</span></div>
+            <div class="loop-step-pill"><span>↓</span> <span>Less stream contamination</span></div>
+            <div class="loop-step-pill" style="background:var(--reloop-lime-soft); border-color:var(--reloop-navy);"><span>✓</span> <span>Better material recovery</span></div>
+          </div>
+        </div>
+
+        <!-- Loop 2: Behavioural -->
+        <div class="loop-card">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+            </div>
+            <div>
+              <div class="card-kicker">Loop 02</div>
+              <h3 class="card-heading">Behavioural</h3>
+            </div>
+          </div>
+          <div class="loop-flow-pills">
+            <div class="loop-step-pill"><span>1.</span> <span>Correct, verified disposal</span></div>
+            <div class="loop-step-pill"><span>↓</span> <span>Meaningful student rewards</span></div>
+            <div class="loop-step-pill" style="background:var(--reloop-lime-soft); border-color:var(--reloop-navy);"><span>✓</span> <span>Repeated campus habit</span></div>
+          </div>
+        </div>
+
+        <!-- Loop 3: Economic -->
+        <div class="loop-card">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="chain-icon-circle" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <div class="card-kicker">Loop 03</div>
+              <h3 class="card-heading">Economic</h3>
+            </div>
+          </div>
+          <div class="loop-flow-pills">
+            <div class="loop-step-pill"><span>1.</span> <span>Clean recovered materials</span></div>
+            <div class="loop-step-pill"><span>↓</span> <span>Higher recycling stream value</span></div>
+            <div class="loop-step-pill" style="background:var(--reloop-lime-soft); border-color:var(--reloop-navy);"><span>✓</span> <span>Sustainable reward opportunities</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal Product Footer -->
+  <footer class="site-footer">
+    <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;">
+      <div>
+        <strong style="color:var(--reloop-navy);">ReLoop</strong> — Waste. Reward. Repeat.
+      </div>
+      <div>
+        AI-Powered Campus Waste-to-Value Ecosystem
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="reloop-toast" id="reloopToast" role="status" aria-live="polite">
+    <span id="reloopToastMessage">Update complete</span>
+    <button type="button" onclick="hideReloopToast()" style="background:none; border:none; color:var(--reloop-lime); font-weight:800; cursor:pointer;">✕</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

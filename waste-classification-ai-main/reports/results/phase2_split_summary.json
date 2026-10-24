@@ -1,0 +1,79 @@
+{
+  "total_images": 2527,
+  "img_size": 224,
+  "split_ratios_target": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "split_counts": {
+    "train": 1768,
+    "val": 379,
+    "test": 380
+  },
+  "counts_per_class_per_split": {
+    "cardboard": {
+      "train": 282,
+      "val": 61,
+      "test": 60
+    },
+    "glass": {
+      "train": 350,
+      "val": 75,
+      "test": 76
+    },
+    "metal": {
+      "train": 287,
+      "val": 61,
+      "test": 62
+    },
+    "paper": {
+      "train": 416,
+      "val": 89,
+      "test": 89
+    },
+    "plastic": {
+      "train": 337,
+      "val": 72,
+      "test": 73
+    },
+    "trash": {
+      "train": 96,
+      "val": 21,
+      "test": 20
+    }
+  },
+  "proportions_per_class_per_split": {
+    "cardboard": {
+      "train": 0.16,
+      "val": 0.161,
+      "test": 0.158
+    },
+    "glass": {
+      "train": 0.198,
+      "val": 0.198,
+      "test": 0.2
+    },
+    "metal": {
+      "train": 0.162,
+      "val": 0.161,
+      "test": 0.163
+    },
+    "paper": {
+      "train": 0.235,
+      "val": 0.235,
+      "test": 0.234
+    },
+    "plastic": {
+      "train": 0.191,
+      "val": 0.19,
+      "test": 0.192
+    },
+    "trash": {
+      "train": 0.054,
+      "val": 0.055,
+      "test": 0.053
+    }
+  },
+  "seed": 42
+}
