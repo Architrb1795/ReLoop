@@ -103,8 +103,8 @@ flowchart TD
 ```mermaid
 flowchart LR
     subgraph CLIENT["Frontend Web Application (index.html + styles.css + app.js)"]
-        UI_RVM["RVM Machine Kiosk Tab\n- WebRTC Live Camera & Auto-Scan\n- Manual Photo Upload\n- 1-Click Dataset & Stone Testbench\n- Animated Servo Gate Blueprint\n- Session Queue & QR Generator"]
-        UI_APP["Student Mobile App Tab\n- Student Wallet & Impact Stats\n- jsQR Camera Scanner & Manual Claim\n- Campus RVM Locator & Bin Levels\n- Canteen Reward Store\n- Hostel Leaderboard"]
+        UI_RVM["RVM Machine Kiosk Tab<br/>- WebRTC Live Camera & Auto-Scan<br/>- Manual Photo Upload<br/>- 1-Click Dataset & Stone Testbench<br/>- Animated Servo Gate Blueprint<br/>- Session Queue & QR Generator"]
+        UI_APP["Student Mobile App Tab<br/>- Student Wallet & Impact Stats<br/>- jsQR Camera Scanner & Manual Claim<br/>- Campus RVM Locator & Bin Levels<br/>- Canteen Reward Store<br/>- Hostel Leaderboard"]
     end
 
     subgraph SERVER["Unified Backend Server (server.py on Port 8080)"]
@@ -115,15 +115,15 @@ flowchart LR
     end
 
     subgraph VISION["Computer Vision Engine (hardware_and_ai/rvm_ai_engine.py)"]
-        RESNET["Calibrated ResNet50 Backbone\n(reloop_resnet50_calibrated.pt)"]
-        OOD["18-D Open-Set Discriminator\n(Mahalanobis + Energy + 12-D Texture)"]
-        MAPPER["RVM Category, Servo Angle &\nDynamic Points Mapper"]
+        RESNET["Calibrated ResNet50 Backbone<br/>(reloop_resnet50_calibrated.pt)"]
+        OOD["18-D Open-Set Discriminator<br/>(Mahalanobis + Energy + 12-D Texture)"]
+        MAPPER["RVM Category, Servo Angle &<br/>Dynamic Points Mapper"]
     end
 
     subgraph HW["Physical Edge Hardware (hardware_and_ai/esp32_rvm_controller.ino)"]
-        ESP["ESP32 Microcontroller\n(UART 115200 Baud)"]
-        SERVOS["Feeder + Diverter Servos\n(60° | 90° | 120° | 180°)"]
-        SENSORS["HC-SR04 Ultrasonic + HX711 Load Cell\n+ IR Bin Fill Sensors"]
+        ESP["ESP32 Microcontroller<br/>(UART 115200 Baud)"]
+        SERVOS["Feeder + Diverter Servos<br/>(60° | 90° | 120° | 180°)"]
+        SENSORS["HC-SR04 Ultrasonic + HX711 Load Cell<br/>+ IR Bin Fill Sensors"]
     end
 
     UI_RVM -- "Base64 Frame / Image" --> API_PRED
@@ -140,10 +140,10 @@ flowchart LR
 | Layer | Technology | Role in ReLoop |
 | :--- | :--- | :--- |
 | **Computer Vision & Deep Learning** | **PyTorch**, **Torchvision (`ResNet50`)**, **Scikit-Learn**, **NumPy**, **Pillow** | Multi-view transfer learning, temperature scaling (`T=0.6929`), L2-regularized head calibration, and 18-D Open-Set OOD detection. |
-| **Backend API & State Engine** | **Python `ThreadingHTTPServer`** ([`server.py`](file:///c:/Users/Archit/HTML/NSS_Sociothon/server.py)) | Serves static assets and REST endpoints (`/api/predict`, `/api/test-sample`, `/api/deposit`, `/api/state`, `/api/health`) on a single port (`8080`) with zero CORS friction. |
-| **Frontend Kiosk & Student App** | **HTML5**, **CSS3 (ReLoop Design System)**, **Vanilla ES6 JavaScript** ([`index.html`](file:///c:/Users/Archit/HTML/NSS_Sociothon/index.html), [`styles.css`](file:///c:/Users/Archit/HTML/NSS_Sociothon/styles.css), [`app.js`](file:///c:/Users/Archit/HTML/NSS_Sociothon/app.js)) | Responsive dual-view interface (`RVM Machine` Kiosk + `Student App`), WebRTC camera capture, `qrcode.js` ticket rendering, and `jsQR` scanner. |
-| **Embedded Hardware Firmware** | **C++ / Arduino (`ESP32`)** ([`esp32_rvm_controller.ino`](file:///c:/Users/Archit/HTML/NSS_Sociothon/hardware_and_ai/esp32_rvm_controller.ino)) | Controls MG996R sorting servos, HC-SR04 ultrasonic trigger, HX711 load-cell amplifier, SSD1306 OLED display, and bin-level IR sensors. |
-| **Automated Verification** | **Python `unittest`** ([`tests/test_reloop_system.py`](file:///c:/Users/Archit/HTML/NSS_Sociothon/tests/test_reloop_system.py)) | End-to-end verification of valid waste classification, stone/OOD rejection, poor-quality frame rejection, and single-use QR deposit anti-replay. |
+| **Backend API & State Engine** | **Python `ThreadingHTTPServer`** ([`server.py`](server.py)) | Serves static assets and REST endpoints (`/api/predict`, `/api/test-sample`, `/api/deposit`, `/api/state`, `/api/health`) on a single port (`8080`) with zero CORS friction. |
+| **Frontend Kiosk & Student App** | **HTML5**, **CSS3 (ReLoop Design System)**, **Vanilla ES6 JavaScript** ([`index.html`](index.html), [`styles.css`](styles.css), [`app.js`](app.js)) | Responsive dual-view interface (`RVM Machine` Kiosk + `Student App`), WebRTC camera capture, `qrcode.js` ticket rendering, and `jsQR` scanner. |
+| **Embedded Hardware Firmware** | **C++ / Arduino (`ESP32`)** ([`esp32_rvm_controller.ino`](hardware_and_ai/esp32_rvm_controller.ino)) | Controls MG996R sorting servos, HC-SR04 ultrasonic trigger, HX711 load-cell amplifier, SSD1306 OLED display, and bin-level IR sensors. |
+| **Automated Verification** | **Python `unittest`** ([`tests/test_reloop_system.py`](tests/test_reloop_system.py)) | End-to-end verification of valid waste classification, stone/OOD rejection, poor-quality frame rejection, and single-use QR deposit anti-replay. |
 
 ---
 
@@ -151,7 +151,7 @@ flowchart LR
 
 ### 5.1 Dataset Composition & Integrity Audit
 
-The model is trained and evaluated on the **TrashNet-derived 6-class dataset** managed inside [`waste-classification-ai-main/`](file:///c:/Users/Archit/HTML/NSS_Sociothon/waste-classification-ai-main/README.md) with deterministic stratified splits (`seed = 42`, `70% Train / 15% Val / 15% Test`) defined in [`splits.csv`](file:///c:/Users/Archit/HTML/NSS_Sociothon/waste-classification-ai-main/data/processed/splits.csv):
+The model is trained and evaluated on the **TrashNet-derived 6-class dataset** managed inside [`waste-classification-ai-main/`](waste-classification-ai-main/README.md) with deterministic stratified splits (`seed = 42`, `70% Train / 15% Val / 15% Test`) defined in [`splits.csv`](waste-classification-ai-main/data/processed/splits.csv):
 
 | Class Label | Train Split (70%) | Validation Split (15%) | Test Split (15%) | Total Images | Target RVM Compartment |
 | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -166,7 +166,7 @@ The model is trained and evaluated on the **TrashNet-derived 6-class dataset** m
 ### 5.2 Root Causes Identified During Audit & Engineering Fixes
 
 1. **Complete Absence of Open-Set / OOD Rejection in Baseline:** Standard closed-set softmax forces *every* arbitrary image into one of the 6 waste classes with high confidence. Evaluating the baseline ResNet50 on 60 stone/rock images resulted in **0.0% rejection** (stones were misclassified as `paper`, `cardboard`, or `trash`).
-   - **Fix:** Engineered an **18-dimensional Open-Set Discriminator** ([`upgrade_ood_detector.py`](file:///c:/Users/Archit/HTML/NSS_Sociothon/waste-classification-ai-main/src/training/upgrade_ood_detector.py)) combining:
+   - **Fix:** Engineered an **18-dimensional Open-Set Discriminator** ([`upgrade_ood_detector.py`](waste-classification-ai-main/src/training/upgrade_ood_detector.py)) combining:
      - Temperature-scaled maximum probability, logit energy, normalized Shannon entropy, and top-2 margin (`4` features).
      - Class-conditional regularized Mahalanobis distance and cosine similarity to normalized `2048-D` class prototypes (`2` features).
      - Physical `12-D` material & texture descriptors: RGB means/stds, HSV saturation mean/std, achromatic gray-pixel ratio, color channel spread, Laplacian texture variance, and central-vs-border contrast (`12` features).
@@ -175,7 +175,7 @@ The model is trained and evaluated on the **TrashNet-derived 6-class dataset** m
 
 ### 5.3 Quantitative Benchmark Comparison (382 Test Images + 150 OOD Samples)
 
-All metrics below are reproducible via [`reloop_pipeline.py`](file:///c:/Users/Archit/HTML/NSS_Sociothon/waste-classification-ai-main/src/training/reloop_pipeline.py) and [`upgrade_ood_detector.py`](file:///c:/Users/Archit/HTML/NSS_Sociothon/waste-classification-ai-main/src/training/upgrade_ood_detector.py), and stored in [`reloop_overhaul_evaluation.json`](file:///c:/Users/Archit/HTML/NSS_Sociothon/waste-classification-ai-main/reports/results/reloop_overhaul_evaluation.json):
+All metrics below are reproducible via [`reloop_pipeline.py`](waste-classification-ai-main/src/training/reloop_pipeline.py) and [`upgrade_ood_detector.py`](waste-classification-ai-main/src/training/upgrade_ood_detector.py), and stored in [`reloop_overhaul_evaluation.json`](waste-classification-ai-main/reports/results/reloop_overhaul_evaluation.json):
 
 | Metric | Baseline `resnet50_best.pt` | Calibrated `reloop_resnet50_calibrated.pt` | Improvement |
 | :--- | :---: | :---: | :---: |
@@ -203,11 +203,21 @@ All metrics below are reproducible via [`reloop_pipeline.py`](file:///c:/Users/A
 
 ## 6. Hardware Architecture & Embedded Controller (`ESP32`)
 
-Full hardware schematics, Bill of Materials (BOM), and wiring instructions are documented in [`HARDWARE_AND_WORKFLOW_DOCS.md`](file:///c:/Users/Archit/HTML/NSS_Sociothon/HARDWARE_AND_WORKFLOW_DOCS.md), and the production microcontroller firmware is located in [`hardware_and_ai/esp32_rvm_controller.ino`](file:///c:/Users/Archit/HTML/NSS_Sociothon/hardware_and_ai/esp32_rvm_controller.ino).
+Full hardware schematics, Bill of Materials (BOM), and wiring instructions are documented in [`HARDWARE_AND_WORKFLOW_DOCS.md`](HARDWARE_AND_WORKFLOW_DOCS.md), and the production microcontroller firmware is located in [`hardware_and_ai/esp32_rvm_controller.ino`](hardware_and_ai/esp32_rvm_controller.ino).
 
 ### 6.1 Physical Sequence
 
-$$\text{Waste Hopper} \longrightarrow \text{Controlled Feeder} \longrightarrow \text{Camera \& LED Array} \longrightarrow \text{AI Inference Node} \longrightarrow \text{ESP32 Controller} \longrightarrow \text{Servo Sorting Gates} \longrightarrow \text{Segregated Bins}$$
+```mermaid
+flowchart LR
+    H["1. Waste Hopper"] --> F["2. Controlled Feeder"]
+    F --> C["3. Camera and LED Array"]
+    C --> AI["4. AI Inference Node"]
+    AI --> E["5. ESP32 Controller"]
+    E --> S["6. Servo Sorting Gates"]
+    S --> B["7. Segregated Bins"]
+```
+
+> **Flow:** `Waste Hopper` → `Controlled Feeder` → `Camera & LED Array` → `AI Inference Node` → `ESP32 Controller` → `Servo Sorting Gates` → `Segregated Bins`
 
 ### 6.2 ESP32 GPIO Pinout & Component Mapping
 
@@ -217,7 +227,7 @@ $$\text{Waste Hopper} \longrightarrow \text{Controlled Feeder} \longrightarrow \
 | **Chamber Drop-Trap Servo** | `SG90` / `MG996R` | `GPIO 12 (PWM)` | Releases inspected item from bay (`0°` closed -> `90°` drop) |
 | **Ultrasonic Trigger & Echo** | `HC-SR04` | `GPIO 5` / `GPIO 18` | Detects item entry inside inspection chamber (`< 15 cm`) |
 | **Load Cell Amplifier** | `HX711` + `5 kg` Load Cell | `GPIO 4` / `GPIO 16` | Measures item mass (`g`) to prevent hollow/fake deposits |
-| **IR Bin Fullness Sensors (x3)** |LM393 IR Obstacle Modules | `GPIO 32, 33, 25` | Monitors fill levels for Biodegradable, Recyclable, and Residual bins |
+| **IR Bin Fullness Sensors (x3)** | `LM393` IR Obstacle Modules | `GPIO 32, 33, 25` | Monitors fill levels for Biodegradable, Recyclable, and Residual bins |
 | **OLED Kiosk Status Display** | `0.96"` I2C `SSD1306` | `GPIO 21 (SDA), 22 (SCL)` | Displays live machine status and points on physical kiosk |
 | **Piezo Buzzer & Status LEDs** | `5V` Active Buzzer | `GPIO 26` | Audible confirmation on sort or alert on foreign object rejection |
 
@@ -239,7 +249,9 @@ $$\text{Waste Hopper} \longrightarrow \text{Controlled Feeder} \longrightarrow \
 
 To incentivize clean, high-recovery material deposits while maintaining financial sustainability for campus canteens, ReLoop calculates points using:
 
-$$\text{Points} = \text{Round}\left(\text{Base Points} \times \text{Quality Factor} \times \text{Verification Factor}\right)$$
+```text
+Points = Round(Base Points × Quality Factor × Verification Factor)
+```
 
 - **Base Points:** Assigned according to material scrap value, recyclability, and campus handling priority.
 - **Quality Factor (`1.0` default):** Reflects classification confidence and uncontaminated condition.
@@ -275,7 +287,7 @@ When scanned via the Student App (`POST /api/deposit`):
 
 ## 8. Kiosk Simulation & Student Mobile Application
 
-The web application ([`index.html`](file:///c:/Users/Archit/HTML/NSS_Sociothon/index.html)) provides two distinct product interfaces accessible from the top navigation bar:
+The web application ([`index.html`](index.html)) provides two distinct product interfaces accessible from the top navigation bar:
 
 ### 8.1 View 1: `RVM Machine` (Kiosk Touch Interface)
 - **Dual Input Modes:**
@@ -371,7 +383,7 @@ NSS_Sociothon/
 
 ## 10. REST API Reference
 
-The unified server ([`server.py`](file:///c:/Users/Archit/HTML/NSS_Sociothon/server.py)) exposes the following JSON endpoints on `http://localhost:8080`:
+The unified server ([`server.py`](server.py)) exposes the following JSON endpoints on `http://localhost:8080`:
 
 | Method | Endpoint | Description | Request Body / Query Params | Response Highlights |
 | :---: | :--- | :--- | :--- | :--- |
@@ -442,11 +454,11 @@ python -m src.training.upgrade_ood_detector
 
 | Phase | Milestone | Status | Key Deliverables |
 | :---: | :--- | :---: | :--- |
-| **Phase 1** | **Repository & Dataset Audit** | ✅ **Completed** | Audited 2,527 images (`70/15/15` split), fixed path portability in [`splitter.py`](file:///c:/Users/Archit/HTML/NSS_Sociothon/waste-classification-ai-main/src/data/splitter.py), and benchmarked baseline ResNet50. |
+| **Phase 1** | **Repository & Dataset Audit** | ✅ **Completed** | Audited 2,527 images (`70/15/15` split), fixed path portability in [`splitter.py`](waste-classification-ai-main/src/data/splitter.py), and benchmarked baseline ResNet50. |
 | **Phase 2** | **AI Calibration & Open-Set OOD** | ✅ **Completed** | Built temperature-scaled head (`T=0.6929`) + 18-D Open-Set Stone/Anomaly Detector (`94.71%` Test Acc, `99.97%` OOD AUROC, `96.67%` Stone Rejection). |
 | **Phase 3** | **RVM Kiosk Simulation** | ✅ **Completed** | Built responsive Kiosk UI with live WebRTC camera, manual photo upload, 1-click dataset/OOD testbench, animated servo gate blueprint, and QR ticket generator. |
 | **Phase 4** | **Student App & Backend Integration** | ✅ **Completed** | Built Student Wallet, QR Scanner (`jsQR`), Canteen Coupon Store, Campus Machine Locator, Leaderboard, and anti-replay `/api/deposit` backend. |
-| **Phase 5** | **Physical Mechatronic Prototype** | 🔧 **Ready for Assembly** | Flash [`esp32_rvm_controller.ino`](file:///c:/Users/Archit/HTML/NSS_Sociothon/hardware_and_ai/esp32_rvm_controller.ino) onto ESP32, wire MG996R servos, HC-SR04 sensor, and HX711 load cell per [`HARDWARE_AND_WORKFLOW_DOCS.md`](file:///c:/Users/Archit/HTML/NSS_Sociothon/HARDWARE_AND_WORKFLOW_DOCS.md). |
+| **Phase 5** | **Physical Mechatronic Prototype** | 🔧 **Ready for Assembly** | Flash [`esp32_rvm_controller.ino`](hardware_and_ai/esp32_rvm_controller.ino) onto ESP32, wire MG996R servos, HC-SR04 sensor, and HX711 load cell per [`HARDWARE_AND_WORKFLOW_DOCS.md`](HARDWARE_AND_WORKFLOW_DOCS.md). |
 | **Phase 6** | **Campus Canteen Pilot Testing** | 🚀 **Next Step** | Deploy pilot unit at Hostel Night Canteen, measure daily sorting throughput, contamination rate, and canteen coupon redemption economics. |
 
 ### Safety & Operational Safeguards
@@ -459,4 +471,4 @@ python -m src.training.upgrade_ood_detector
 
 ## License
 
-This project is released under the [MIT License](file:///c:/Users/Archit/HTML/NSS_Sociothon/waste-classification-ai-main/LICENSE).
+This project is released under the [MIT License](waste-classification-ai-main/LICENSE).
